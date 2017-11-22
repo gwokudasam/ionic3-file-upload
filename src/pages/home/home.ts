@@ -48,10 +48,10 @@ export class HomePage {
       headers: {}
     }
 
-    fileTransfer.upload(this.imageURI, 'http://192.168.0.7:8080/api/uploadImage', options)
+    fileTransfer.upload(this.imageURI, 'http://192.168.12.194:8080/upload', options)
       .then((data) => {
       console.log(data+" Uploaded Successfully");
-      this.imageFileName = "http://192.168.0.7:8080/static/images/ionicfile.jpg"
+      this.imageFileName = "http://192.168.12.194:8080/ionicfile.jpg"
       loader.dismiss();
       this.presentToast("Image uploaded successfully");
     }, (err) => {
@@ -74,5 +74,4 @@ export class HomePage {
 
     toast.present();
   }
-
 }
